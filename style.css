@@ -414,3 +414,74 @@ section h2{
         height:220px;
     }
 }
+/* PREMIUM BUBBLE BUTTON CONTACT */
+
+.contact-btn-label{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    font-size:0.9rem;
+    font-weight:600;
+
+    transition:all 0.3s ease;
+
+    margin-top:auto;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.25);
+
+    letter-spacing:0.3px;
+}
+
+/* WHATSAPP */
+.wa-item .contact-btn-label{
+    background:rgba(37,211,102,0.12);
+    color:#25d366;
+    border:1px solid rgba(37,211,102,0.4);
+}
+
+/* SNAPCHAT */
+.snap-item .contact-btn-label{
+    background:rgba(255,252,0,0.10);
+    color:#fffc00;
+    border:1px solid rgba(255,252,0,0.35);
+}
+
+/* EMAIL */
+.email-item .contact-btn-label{
+    background:rgba(234,67,53,0.10);
+    color:#ea4335;
+    border:1px solid rgba(234,67,53,0.35);
+}
+
+/* HOVER EFFECT */
+.contact-item:hover .contact-btn-label{
+    transform:translateY(-2px) scale(1.05);
+    box-shadow:
+    0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* WHATSAPP HOVER */
+.wa-item:hover .contact-btn-label{
+    background:#25d366;
+    color:white;
+}
+
+/* SNAPCHAT HOVER */
+.snap-item:hover .contact-btn-label{
+    background:#fffc00;
+    color:black;
+}
+
+/* EMAIL HOVER */
+.email-item:hover .contact-btn-label{
+    background:#ea4335;
+    color:white;
+}
