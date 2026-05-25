@@ -342,10 +342,42 @@
 </section>
 
 <section id="contact">
-    <h2 class="en-text">Contact & Booking Information</h2>
-    <h2 class="ar-text" dir="rtl">معلومات الاتصال والحجز</h2>
+    <h2 class="en-text">How to Book & Contact Us</h2>
+    <h2 class="ar-text" dir="rtl">كيفية الحجز والاتصال بنا</h2>
     
     <div class="contact-container">
+        
+        <div class="booking-steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <i class="fas fa-car-side step-icon"></i>
+                <h4 class="en-text">Choose Service</h4>
+                <h4 class="ar-text">اختر الخدمة</h4>
+                <p class="en-text">Select your preferred car, tourist destination, or activity programs.</p>
+                <p class="ar-text" dir="rtl">اختر السيارة المفضلة لديك، الوجهة السياحية، أو برامج الأنشطة.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <i class="fab fa-whatsapp step-icon"></i>
+                <h4 class="en-text">Send Details</h4>
+                <h4 class="ar-text">أرسل التفاصيل</h4>
+                <p class="en-text">Click our WhatsApp/Snapchat button and send your travel dates.</p>
+                <p class="ar-text" dir="rtl">انقر على زر الواتساب أو السناب شات وأرسل لنا تواريخ رحلتك.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <i class="fas fa-calendar-check step-icon"></i>
+                <h4 class="en-text">Get Confirmation</h4>
+                <h4 class="ar-text">احصل على التأكيد</h4>
+                <p class="en-text">Our team will confirm your booking instantly. No deposit required!</p>
+                <p class="ar-text" dir="rtl">سيقوم فريقنا بتأكيد حجزك فوراً. لا حاجة لدفعة مقدمة!</p>
+            </div>
+        </div>
+
+        <hr class="contact-divider">
+
         <p class="contact-subtitle en-text">Ready to experience the ultimate luxury Bali trip? Get in touch with us anytime.</p>
         <p class="contact-subtitle ar-text" dir="rtl">هل أنت مستعد لتجربة رحلة فاخرة في بالي؟ تواصل معنا في أي وقت.</p>
         
@@ -376,38 +408,3 @@
         </div>
     </div>
 </section>
-
-<footer>
-    <p>Alfauzan Tour © 2026</p>
-    <p class="en-text">Luxury Private Tours and Transport Services in Bali</p>
-    <p class="ar-text" dir="rtl">رحلات سياحية فاخرة وخدمات نقل خاصة في جزيرة بالي</p>
-</footer>
-
-<a href="https://wa.me/6285647100418" class="whatsapp-sticky" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-    <span class="en-text">Chat with Us</span>
-    <span class="ar-text">تواصل معنا</span>
-</a>
-
-<script>
-    function switchLanguage(lang) {
-        const body = document.body;
-        const btnEn = document.getElementById('btn-en');
-        const btnAr = document.getElementById('btn-ar');
-
-        if (lang === 'ar') {
-            body.classList.remove('lang-en');
-            body.classList.add('lang-ar');
-            btnAr.classList.add('active');
-            btnEn.classList.remove('active');
-        } else {
-            body.classList.remove('lang-ar');
-            body.classList.add('lang-en');
-            btnEn.classList.add('active');
-            btnAr.classList.remove('active');
-        }
-    }
-</script>
-
-</body>
-</html>
