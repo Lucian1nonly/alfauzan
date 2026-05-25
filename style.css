@@ -1,0 +1,325 @@
+/* RESET & GLOBAL STYLES */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#0b0b0b;
+    color:white;
+    line-height:1.6;
+    overflow-x: hidden;
+}
+
+/* --- KENDALI LOGIKA SWITCH BAHASA VIA CSS --- */
+/* Sembunyikan Arab jika sistem diset ke English */
+body.lang-en .ar-text {
+    display: none !important;
+}
+/* Sembunyikan English jika sistem diset ke Arab */
+body.lang-ar .en-text {
+    display: none !important;
+}
+/* Paksa ganti font utama halaman menjadi font Cairo saat bahasa Arab aktif */
+body.lang-ar {
+    font-family: 'Cairo', 'Poppins', sans-serif;
+}
+
+header{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+/* NAVIGATION AREA */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    background:rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+nav h1{
+    color:#d4af37;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size: 0.95rem;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+/* ENGINE LANGUAGE SWITCHER BUTTON SYSTEM */
+.lang-switcher {
+    display: flex;
+    background: #222;
+    padding: 3px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.lang-switcher button {
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.75rem;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.lang-switcher button.active {
+    background: #d4af37;
+    color: black;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    padding:20px;
+    margin-top: 20px;
+}
+
+.hero h2{
+    font-size:3.2rem;
+    margin-bottom:15px;
+    text-transform: uppercase;
+}
+
+body.lang-ar .hero h2 {
+    text-transform: none;
+    font-size: 2.8rem;
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:35px;
+    color: #bbb;
+}
+
+.btn{
+    padding:14px 32px;
+    background:#d4af37;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f1c40f;
+    transform: translateY(-2px);
+}
+
+/* SECTIONS GRID SYSTEM */
+section{
+    padding:90px 10% 70px 10%;
+}
+
+.bg-darker {
+    background: #111111;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:#d4af37;
+    font-size:2.2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#151515;
+    padding:30px;
+    border-radius:15px;
+    transition:0.3s;
+    border:1px solid #2a2a2a;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#d4af37;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#d4af37;
+    font-size: 1.3rem;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+.card h4{
+    margin-top:20px;
+    font-size:1.6rem;
+    color: #d4af37;
+}
+
+/* ================= KUSTOMISASI KARTU TESTIMONI (BARU) ================= */
+.testimonial-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 25px;
+}
+
+.user-img-container {
+    width: 100%;
+    height: 280px; /* Ukuran proporsional potret tinggi tegak lurus */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan foto penuh mengisi frame tanpa penyok */
+    object-position: center top;
+}
+
+.testi-content {
+    width: 100%;
+}
+
+.rating {
+    color: #f1c40f; /* Warna Bintang Emas Premium */
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.flag-icon {
+    width: 20px;
+    height: auto;
+    margin-left: 8px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/* Modifikasi margin bendera saat bahasa Arab agar presisi letaknya */
+body.lang-ar .flag-icon {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+.testimonial-card p {
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* FOOTER AREA */
+footer{
+    text-align:center;
+    padding:40px 20px;
+    background:#050505;
+    border-top:1px solid #222;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* STICKY PHONE ACTION ACCESS (WHATSAPP BUTTON FLOATING) */
+.whatsapp-sticky {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.whatsapp-sticky:hover {
+    transform: scale(1.05);
+    background: #20ba5a;
+}
+
+/* RESPONSIVE DESIGN ADJUSTMENTS */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding: 15px;
+        position: static;
+    }
+
+    nav ul{
+        display: none !important; /* Menyembunyikan menu link panjang di perangkat mobile agar rapi */
+    }
+
+    .hero{
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h2{
+        font-size:2.2rem;
+    }
+
+    section {
+        padding: 50px 5% 30px 5%;
+    }
+}
