@@ -96,25 +96,26 @@ nav a:hover{
 }
 
 /* HERO TEXT */
-.hero{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    text-align:center;
-    padding:20px;
+.hero {
+    /* ... kode lama kamu ... */
+    background-image: url('foto-bali-kamu.jpg'); /* Pastikan path-nya benar */
+    background-size: cover;          /* Memastikan gambar menutup area */
+    background-position: center;     /* Menjaga agar fokus tetap di tengah */
+    background-repeat: no-repeat;
+    background-attachment: scroll;   /* Penting: ganti fixed jadi scroll untuk HP */
+    min-height: 80vh;                /* Menjamin hero punya tinggi di HP */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero h2{
-    font-size:3rem;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:1.2rem;
-    margin-bottom:25px;
-    color: #bbb;
+/* Tambahan agar lebih pas di HP */
+@media (max-width: 768px) {
+    .hero {
+        background-position: center center; /* Fokuskan tengah gambar */
+        background-size: cover;
+    }
 }
 
 .btn{
