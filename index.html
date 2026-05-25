@@ -382,7 +382,7 @@
         <p class="contact-subtitle ar-text" dir="rtl">هل أنت مستعد لتجربة رحلة فاخرة في بالي؟ تواصل معنا في أي وقت.</p>
         
         <div class="contact-grid">
-            <a href="https://wa.me/6285647100418" target="_blank" class="contact-item wa-item">
+            <a href="#" target="_blank" class="contact-item wa-item" id="wa-contact">
                 <div class="contact-icon-box"><i class="fab fa-whatsapp"></i></div>
                 <h3>WhatsApp</h3>
                 <p>+62 856-4710-0418</p>
@@ -408,3 +408,49 @@
         </div>
     </div>
 </section>
+
+<script>
+    function switchLanguage(lang) {
+        const body = document.body;
+        const btnEn = document.getElementById('btn-en');
+        const btnAr = document.getElementById('btn-ar');
+        const waContact = document.getElementById('wa-contact');
+
+        // Form Pesan Otomatis dalam 2 Bahasa Berbeda
+        const msgEn = "Hello Alfauzan Tour, I would like to book a service in Bali:%0A%0AName:%20%0ADate:%20%0ACar / Package Option:%20%0APax / Number of People:%20";
+        const msgAr = "مرحباً الفوزان تور، أرغب في حجز خدمة في بالي:%0A%0Aالاسم:%20%0Aالتاريخ:%20%0Aنوع السيارة / البرنامج:%20%0Aعدد الأشخاص:%20";
+
+        let finalLink = "";
+
+        if (lang === 'ar') {
+            body.classList.remove('lang-en');
+            body.classList.add('lang-ar');
+            btnAr.classList.add('active');
+            btnEn.classList.remove('active');
+            
+            // Atur link WA pesan teks otomatis versi bahasa Arab
+            finalLink = "https://wa.me/6285647100418?text=" + msgAr;
+        } else {
+            body.classList.remove('lang-ar');
+            body.classList.add('lang-en');
+            btnEn.classList.add('active');
+            btnAr.classList.remove('active');
+            
+            // Atur link WA pesan teks otomatis versi bahasa Inggris
+            finalLink = "https://wa.me/6285647100418?text=" + msgEn;
+        }
+
+        // Terapkan link final yang disesuaikan ke komponen HTML tombol WhatsApp
+        if (waContact) {
+            waContact.href = finalLink;
+        }
+    }
+
+    // Eksekusi otomatis saat pertama kali web dimuat (default: bahasa Inggris)
+    window.onload = function() {
+        switchLanguage('en');
+    };
+</script>
+
+</body>
+</html>
