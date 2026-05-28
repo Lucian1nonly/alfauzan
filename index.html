@@ -8,50 +8,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="lang-en"> 
+<body id="main-body"> 
+   </body>
 
 <header>
-    <nav>
-        <h1>Alfauzan Tour</h1>
-        
-        <ul class="nav-links en-text">
-            <li><a href="#destinations">Destinations</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#cars">Cars</a></li>
-            <li><a href="#tours">Tour Programs</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<nav>
+    <h1>Alfauzan Tour</h1>
+    
+    <ul class="nav-links">
+        <li><a href="#destinations"><span class="en-text">Destinations</span><span class="ar-text" style="display:none;">الوجهات</span></a></li>
+        <li><a href="#activities"><span class="en-text">Activities</span><span class="ar-text" style="display:none;">الأنشطة</span></a></li>
+        <li><a href="#cars"><span class="en-text">Cars</span><span class="ar-text" style="display:none;">السيارات</span></a></li>
+        <li><a href="#contact"><span class="en-text">Contact</span><span class="ar-text" style="display:none;">اتصل بنا</span></a></li>
+    </ul>
 
-        <ul class="nav-links ar-text" dir="rtl">
-            <li><a href="#destinations">الوجهات</a></li>
-            <li><a href="#activities">الأنشطة</a></li>
-            <li><a href="#cars">السيارات</a></li>
-            <li><a href="#tours">البرامج</a></li>
-            <li><a href="#testimonials">الشهادات</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
-        </ul>
-
-        <div class="lang-switcher">
-            <button onclick="switchLanguage('en')" id="btn-en" class="active">EN</button>
-            <button onclick="switchLanguage('ar')" id="btn-ar">AR</button>
-        </div>
-    </nav>
-
-    <div class="hero">
-        <div class="en-text">
-            <h2>Explore Bali With Luxury & Comfort</h2>
-            <p>Discover the beauty of Bali with us</p>
-        </div>
-        <div class="ar-text" dir="rtl">
-            <h2>اكتشف سحر بالي معنا بأعلى مستويات الرفاهية</h2>
-            <p>اكتشف جمال بالي معنا وثق ببرامجنا المميزة</p>
-        </div>
-        <a class="btn" href="#contact">
-            <span class="en-text">Book Now</span>
-            <span class="ar-text">احجز الآن</span>
-        </a>
+    <div class="nav-controls">
+        <!-- Ubah bagian div lang-switcher Anda menjadi seperti ini -->
+<div class="lang-switcher">
+    <button id="btn-en">EN</button>
+    <button id="btn-ar">AR</button>
+</div>
+        <div class="menu-toggle">☰</div>
     </div>
+</nav>
+
+<header class="hero">
+    <h2>
+        <span class="en-text">Explore Bali With Luxury & Comfort</span>
+        <span class="ar-text" style="display:none;">استكشف بالي برفاهية وراحة</span>
+    </h2>
+    <p>
+        <span class="en-text">Discover the beauty of Bali with us</span>
+        <span class="ar-text" style="display:none;">اكتشف جمال بالي معنا</span>
+    </p>
+    <a href="#contact" class="btn">
+        <span class="en-text">Book Now</span>
+        <span class="ar-text" style="display:none;">احجز الآن</span>
+    </a>
 </header>
 
 <section id="destinations">
@@ -61,7 +54,7 @@
     <div class="cards">
         <div class="card">
             <div class="card-img-container">
-                <img src="destinasi1.jpg" alt="Pantai Pandawa" class="card-img">
+                <img src="images/destinasi1.jpg" alt="Pantai Pandawa" class="card-img" loading="lazy">
             </div>
             <h3>Pantai Pandawa</h3>
             <p class="en-text">Beautiful Pandawa beach with turquoise water and amazing cliff views.</p>
@@ -70,7 +63,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="destinasi2.jpg" alt="Pantai Melasti" class="card-img">
+                <img src="images/destinasi2.jpg" alt="Pantai Melasti" class="card-img" loading="lazy">
             </div>
             <h3>Pantai Melasti</h3>
             <p class="en-text">A perfect high-cliff coastal spot for sunset photography and clean vibes.</p>
@@ -79,7 +72,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="destinasi3.jpg" alt="Pantai Kuta" class="card-img">
+                <img src="images/destinasi3.jpg" alt="Pantai Kuta" class="card-img" loading="lazy">
             </div>
             <h3>Pantai Kuta</h3>
             <p class="en-text">The most vibrant and historic beach in Bali, ideal for surfing and leisure.</p>
@@ -88,7 +81,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="destinasi4.jpg" alt="Ubud Monkey Forest" class="card-img">
+                <img src="images/destinasi4.jpg" alt="Ubud Monkey Forest" class="card-img" loading="lazy">
             </div>
             <h3>Ubud Monkey Forest</h3>
             <p class="en-text">A natural sanctuary forest filled with lush tropical scenery and cultures.</p>
@@ -104,7 +97,7 @@
     <div class="cards">
         <div class="card">
             <div class="card-img-container">
-                <img src="aktivitas1.jpg" alt="Watersport" class="card-img">
+                <img src="images/aktivitas1.jpg" alt="Watersport" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Watersport</h3>
             <h3 class="ar-text">الألعاب المائية</h3>
@@ -112,7 +105,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="aktivitas2.jpg" alt="ATV Quad Bike" class="card-img">
+                <img src="images/aktivitas2.jpg" alt="ATV Quad Bike" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">ATV Quad Bike</h3>
             <h3 class="ar-text">مغامرات دبابات الدفع الرباعي</h3>
@@ -120,7 +113,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="aktivitas3.jpg" alt="Volkswagen Tour" class="card-img">
+                <img src="images/aktivitas3.jpg" alt="Volkswagen Tour" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Volkswagen Tour (VW)</h3>
             <h3 class="ar-text">جولة سيارة فولكس فاجن الكلاسيكية</h3>
@@ -128,7 +121,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="aktivitas4.jpg" alt="Rafting in Ubud" class="card-img">
+                <img src="images/aktivitas4.jpg" alt="Rafting in Ubud" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Rafting in Ubud</h3>
             <h3 class="ar-text">التجديف النهري في أوبود</h3>
@@ -136,7 +129,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="aktivitas5.jpg" alt="Swing at Ubud" class="card-img">
+                <img src="images/aktivitas5.jpg" alt="Swing at Ubud" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Swing at Ubud</h3>
             <h3 class="ar-text">أرجوحة بالي الشهيرة</h3>
@@ -144,7 +137,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="aktivitas6.jpg" alt="Nusa Penida Tour" class="card-img">
+                <img src="images/aktivitas6.jpg" alt="Nusa Penida Tour" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Nusa Penida Tour</h3>
             <h3 class="ar-text">رحلة كاملة إلى نوسا بينيدا</h3>
@@ -152,7 +145,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="aktivitas7.jpg" alt="Horse Riding" class="card-img">
+                <img src="images/aktivitas7.jpg" alt="Horse Riding" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Horse Riding</h3>
             <h3 class="ar-text">ركوب الخيل على الشاطئ</h3>
@@ -167,7 +160,7 @@
     <div class="cards car-grid">
         <div class="card car-card">
             <div class="card-img-container car-img-frame">
-                <img src="car_avanza.jpg" alt="Toyota Avanza Bali" class="card-img car-photo">
+                <img src="images/car_avanza.jpg" alt="Toyota Avanza Bali" class="card-img car-photo" loading="lazy">
             </div>
             <h3>All New Avanza</h3>
             <div class="car-details en-text">
@@ -187,7 +180,7 @@
 
         <div class="card car-card featured-car">
             <div class="card-img-container car-img-frame">
-                <img src="car_innova.jpg" alt="Toyota Innova Bali" class="card-img car-photo">
+                <img src="images/car_innova.jpg" alt="Toyota Innova Bali" class="card-img car-photo" loading="lazy">
             </div>
             <h3>Toyota Innova</h3>
             <div class="car-details en-text">
@@ -207,7 +200,7 @@
 
         <div class="card car-card">
             <div class="card-img-container car-img-frame">
-                <img src="car_hiace.jpg" alt="Toyota Hiace Bali" class="card-img car-photo">
+                <img src="images/car_hiace.jpg" alt="Toyota Hiace Bali" class="card-img car-photo" loading="lazy">
             </div>
             <h3>Toyota Hiace</h3>
             <div class="car-details en-text">
@@ -234,7 +227,7 @@
     <div class="cards">
         <div class="card">
             <div class="card-img-container">
-                <img src="tour1.jpg" alt="Uluwatu Tour" class="card-img">
+                <img src="images/tour1.jpg" alt="Uluwatu Tour" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Uluwatu Tour</h3>
             <h3 class="ar-text">جولة أولواتو وغروب الشمس</h3>
@@ -242,7 +235,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="tour2.jpg" alt="Kuta Area Tour" class="card-img">
+                <img src="images/tour2.jpg" alt="Kuta Area Tour" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Kuta Area Tour</h3>
             <h3 class="ar-text">جولة منطقة كوتا الحيوية</h3>
@@ -250,7 +243,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="tour3.jpg" alt="Ubud Area Tour" class="card-img">
+                <img src="images/tour3.jpg" alt="Ubud Area Tour" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Ubud Area Tour</h3>
             <h3 class="ar-text">جولة أوبود الطبيعية</h3>
@@ -258,7 +251,7 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="tour4.jpg" alt="Bedugul Area Tour" class="card-img">
+                <img src="images/tour4.jpg" alt="Bedugul Area Tour" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Bedugul Area Tour</h3>
             <h3 class="ar-text">جولة بحيرة ومصايف بدوجول</h3>
@@ -266,12 +259,29 @@
 
         <div class="card">
             <div class="card-img-container">
-                <img src="tour5.jpg" alt="Kintamani Tour" class="card-img">
+                <img src="images/tour5.jpg" alt="Kintamani Tour" class="card-img" loading="lazy">
             </div>
             <h3 class="en-text">Kintamani Tour</h3>
             <h3 class="ar-text">جولة بركان كينتاماني المطلة</h3>
         </div>
     </div>
+</section>
+
+<section id="custom-tour" style="padding: 60px 20px; background: #050505; color: #fff; text-align: center;">
+    <h2 class="en-text" style="color: #c9a23c;">Custom Your Own Journey</h2>
+    <h2 class="ar-text" style="color: #c9a23c;" dir="rtl">صمم رحلتك الخاصة</h2>
+    
+    <p class="en-text" style="max-width: 700px; margin: 20px auto; font-size: 1.1em; color: #ccc;">
+        Not finding exactly what you need? Tell us your dream places in Bali, and our team will build a bespoke itinerary just for you.
+    </p>
+    <p class="ar-text" style="max-width: 700px; margin: 20px auto; font-size: 1.1em; color: #ccc;" dir="rtl">
+        ألم تجد ما تبحث عنه بالضبط؟ أخبرنا بالأماكن التي تحلم بزيارتها في بالي، وسيقوم فريقنا بتصميم برنامج رحلة خاص بك وحدك.
+    </p>
+    
+    <a href="#contact" class="btn" style="display: inline-block; margin-top: 20px; padding: 12px 30px; background: #c9a23c; color: #000; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        <span class="en-text">Request Custom Tour</span>
+        <span class="ar-text">اطلب رحلة مخصصة</span>
+    </a>
 </section>
 
 <section id="testimonials">
@@ -281,7 +291,7 @@
     <div class="cards">
         <div class="card testimonial-card">
             <div class="testi-img-frame">
-                <img src="testi1.jpg" alt="Zakaria Alotaibi">
+                <img src="images/testi1.jpg" alt="Zakaria Alotaibi" loading="lazy">
             </div>
             <h3>Zakaria Alotaibi</h3>
             <div class="rating">⭐⭐⭐⭐⭐ 🇸🇦</div>
@@ -291,7 +301,7 @@
 
         <div class="card testimonial-card">
             <div class="testi-img-frame">
-                <img src="testi2.jpg" alt="Mohamed Al Attas">
+                <img src="images/testi2.jpg" alt="Mohamed Al Attas" loading="lazy">
             </div>
             <h3>Mohamed Al Attas</h3>
             <div class="rating">⭐⭐⭐⭐⭐ 🇦🇪</div>
@@ -301,7 +311,7 @@
 
         <div class="card testimonial-card">
             <div class="testi-img-frame">
-                <img src="testi3.jpg" alt="Talal Abu Talal">
+                <img src="images/testi3.jpg" alt="Talal Abu Talal" loading="lazy">
             </div>
             <h3>Talal Abu Talal</h3>
             <div class="rating">⭐⭐⭐⭐⭐ 🇸🇦</div>
@@ -311,7 +321,7 @@
 
         <div class="card testimonial-card">
             <div class="testi-img-frame">
-                <img src="testi4.jpg" alt="Rashid Alhatimi">
+                <img src="images/testi4.jpg" alt="Rashid Alhatimi" loading="lazy">
             </div>
             <h3>Rashid Alhatimi</h3>
             <div class="rating">⭐⭐⭐⭐⭐ 🇸🇦</div>
@@ -321,7 +331,7 @@
 
         <div class="card testimonial-card">
             <div class="testi-img-frame">
-                <img src="testi5.jpg" alt="Meshal Alharbi">
+                <img src="images/testi5.jpg" alt="Meshal Alharbi" loading="lazy">
             </div>
             <h3>Meshal Alharbi</h3>
             <div class="rating">⭐⭐⭐⭐⭐ 🇦🇪</div>
@@ -331,7 +341,7 @@
 
         <div class="card testimonial-card">
             <div class="testi-img-frame">
-                <img src="testi6.jpg" alt="Ibrahim Bin Ahmad">
+                <img src="images/testi6.jpg" alt="Ibrahim Bin Ahmad" loading="lazy">
             </div>
             <h3>Ibrahim Bin Ahmad</h3>
             <div class="rating">⭐⭐⭐⭐⭐ 🇸🇦</div>
@@ -340,6 +350,25 @@
         </div>
     </div>
 </section>
+
+<section class="faq-section">
+    <h2 class="en-text">Frequently Asked Questions</h2>
+    <h2 class="ar-text" dir="rtl">الأسئلة الشائعة</h2>
+    <div class="faq-item">
+        <h4 class="en-text">Do I need to pay a deposit?</h4>
+        <h4 class="ar-text" dir="rtl">هل أحتاج لدفع عربون أو دفعة مقدمة؟</h4>
+        <p class="en-text">No, we trust our guests. Payment is made on the day of your tour.</p>
+        <p class="ar-text" dir="rtl">لا، نحن نثق بعملائنا. يتم الدفع في يوم الرحلة.</p>
+    </div>
+    <div class="faq-item">
+        <h4 class="en-text">Are the drivers fluent in Arabic?</h4>
+        <h4 class="ar-text" dir="rtl">هل السائقون يتحدثون العربية؟</h4>
+        <p class="en-text">Yes, our team is well-trained and fluent in Arabic.</p>
+        <p class="ar-text" dir="rtl">نعم، فريقنا مدرب جيداً ويجيد اللغة العربية بطلاقة.</p>
+    </div>
+</section>
+
+
 
 <section id="contact">
     <h2 class="en-text">How to Book & Contact Us</h2>
@@ -410,47 +439,88 @@
 </section>
 
 <script>
+    // 1. FUNGSI UTAMA SWITCH LANGUAGE
     function switchLanguage(lang) {
         const body = document.body;
         const btnEn = document.getElementById('btn-en');
         const btnAr = document.getElementById('btn-ar');
         const waContact = document.getElementById('wa-contact');
+        const waFloat = document.querySelector('.whatsapp-float');
 
-        // Form Pesan Otomatis dalam 2 Bahasa Berbeda
         const msgEn = "Hello Alfauzan Tour, I would like to book a service in Bali:%0A%0AName:%20%0ADate:%20%0ACar / Package Option:%20%0APax / Number of People:%20";
         const msgAr = "مرحباً الفوزان تور، أرغب في حجز خدمة في بالي:%0A%0Aالاسم:%20%0Aالتاريخ:%20%0Aنوع السيارة / البرنامج:%20%0Aعدد الأشخاص:%20";
 
         let finalLink = "";
 
         if (lang === 'ar') {
-            body.classList.remove('lang-en');
             body.classList.add('lang-ar');
-            btnAr.classList.add('active');
-            btnEn.classList.remove('active');
-            
-            // Atur link WA pesan teks otomatis versi bahasa Arab
+            body.classList.remove('lang-en');
+            if(btnAr) btnAr.classList.add('active');
+            if(btnEn) btnEn.classList.remove('active');
             finalLink = "https://wa.me/6285647100418?text=" + msgAr;
         } else {
-            body.classList.remove('lang-ar');
             body.classList.add('lang-en');
-            btnEn.classList.add('active');
-            btnAr.classList.remove('active');
-            
-            // Atur link WA pesan teks otomatis versi bahasa Inggris
+            body.classList.remove('lang-ar');
+            if(btnEn) btnEn.classList.add('active');
+            if(btnAr) btnAr.classList.remove('active');
             finalLink = "https://wa.me/6285647100418?text=" + msgEn;
         }
 
-        // Terapkan link final yang disesuaikan ke komponen HTML tombol WhatsApp
-        if (waContact) {
-            waContact.href = finalLink;
-        }
+        if (waContact) waContact.href = finalLink;
+        if (waFloat) waFloat.href = finalLink;
     }
 
-    // Eksekusi otomatis saat pertama kali web dimuat (default: bahasa Inggris)
-    window.onload = function() {
-        switchLanguage('en');
+    // 2. LOGIKA MENU
+    function toggleMenu() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    }
+
+    function closeMenu() {
+        document.querySelector('.nav-links').classList.remove('active');
+    }
+
+    // 3. EVENT LISTENERS
+    document.addEventListener('DOMContentLoaded', () => {
+        // Klik tombol bahasa
+        if(document.getElementById('btn-en')) document.getElementById('btn-en').addEventListener('click', () => switchLanguage('en'));
+        if(document.getElementById('btn-ar')) document.getElementById('btn-ar').addEventListener('click', () => switchLanguage('ar'));
+        
+        // Klik tombol burger
+        document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
+
+        // KLIK LINK MENU BIAR AUTO-CLOSE (INI YANG ANDA MAU)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Animasi Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.8s ease-out";
+            observer.observe(el);
+        });
+
+        switchLanguage('en'); // Default
+    });
+
+    // Back to top logic
+    window.onscroll = function() {
+        const btn = document.getElementById("backToTop");
+        if (btn) btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
     };
 </script>
-
+</script>
+</script>
+</script>
 </body>
 </html>
