@@ -506,4 +506,8 @@ body.lang-ar .ar-text { display: inline !important; }
 /* Saat mode Arab aktif, sembunyikan teks EN di dalam tombol WA */
 body.lang-ar .whatsapp-float .en-text {
     display: none !important;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2f5b32797dd2884fd3a4aa9a41960a6b7933ce02
